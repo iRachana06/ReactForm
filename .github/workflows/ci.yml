@@ -8,8 +8,7 @@ jobs:
     steps:
       - uses : action/checkout@v2 #To checkout our repo befor raising PR
       - name : Use NodeJS
+      - uses : action/setup-node@v1
         with :
-          - node-version : "12.x"
-          - run: npm install
-
-
+          node-version : "12.x"
+          run : npm install
