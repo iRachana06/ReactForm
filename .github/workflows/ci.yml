@@ -2,13 +2,14 @@ name : ci-demo
 on: 
   pull_request:
     branches : [develop]
-
+  push:
+    branches: [develop]
 jobs:
   build-app:
     runs-on : ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v2 #To checkout our repo befor raising PR
+        uses: actions/checkout@v2 #To checkout our repo before raising PR
       - name: Use NodeJS
         uses: actions/setup-node@v1
         with:
@@ -30,5 +31,5 @@ jobs:
         env: 
           SURGE_LOGIN : ${{secrets.SURGE_KEY}}
           SURGE_TOKEN : ${{secrets.SURGE_TOKEN}}
-       #Install and use surge to deploy
+       #Install and use surge to deploy the app
       
