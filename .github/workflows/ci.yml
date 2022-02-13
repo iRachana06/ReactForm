@@ -2,7 +2,8 @@ name : ci-demo
 on: 
   pull_request:
     branches : [develop]
-
+  push:
+    branches: [develop]
 jobs:
   build-app:
     runs-on : ubuntu-latest
