@@ -33,7 +33,9 @@ function AddingUser() {
 
   console.log(regisrtyData);
   return (
-    <div> <br/>
+    <div>
+      {" "}
+      <br />
       <h1>Enter User Name Here</h1>
       <form onSubmit={addItem}>
         <label>
@@ -58,7 +60,7 @@ function AddingUser() {
           </li>
         );
       })}
-      <br/>
+      <br />
       <Link to="/"> Go to Home Page </Link>
     </div>
   );

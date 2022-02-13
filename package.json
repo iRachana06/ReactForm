@@ -17,8 +17,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "check-format": "npx prettier --check \"**/*.js\"",
-    "fix-format": "npx prettier --write \"**/*.js\"" 
+    "check-format": "prettier --check \"**/*.js\"",
+    "fix-format": "prettier --write \"**/*.js\"" 
   },
   "eslintConfig": {
     "extends": [
