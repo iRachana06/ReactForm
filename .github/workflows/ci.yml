@@ -17,3 +17,11 @@ jobs:
       - run : npm install prettier
       - run : npm run check-format
       - run : npm test -- --coverage
+      - name: Build App
+        if : github.eventname == 'push'
+      - run : npm run build
+      - name: Deploy to Non Prod
+        if : github.eventname == 'push'
+      - run : npx surge --project ./build --domain techieq-react-intro.surge.sh
+       #Install and use surge to deploy
+      

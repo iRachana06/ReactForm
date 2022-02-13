@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Home() {
   return (
-    <div>
-      <h1>Home</h1>
+    <div align = "center">
+      <h1>Simple React App</h1>
       <Link to="/AddingUser"> Create a list </Link>
 
-      <h1>Notification Tab</h1>
+      <h3>Notification Tab</h3>
       <Link to="/Message"> Notifications </Link>
     </div>
   );
