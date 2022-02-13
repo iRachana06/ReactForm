@@ -1,0 +1,34 @@
+name : ci-demo
+on: 
+  pull_request:
+    branches : [develop]
+
+jobs:
+  build-app:
+    runs-on : ubuntu-latest
+    steps:
+      - name: Checkout action
+        uses: actions/checkout@v2 #To checkout our repo befor raising PR
+      - name: Use NodeJS
+        uses: actions/setup-node@v1
+        with:
+          node-version : "12.x"
+      - run : npm install
+      - run : npm install prettier
+      - run : npm run check-format
+      - run : npm test -- --coverage
+      - name: Build App
+        if : github.eventname == 'push'
+        run : npm run build
+      - name: Deploy to Non Prod
+        if : github.eventname == 'push'
+        run : |
+          npm install --global surge
+          cd build
+          cp index.html 200.html
+          surge --project build --domain techieq-react-intro.surge.sh
+        env: 
+          SURGE_LOGIN : ${{secrets.SURGE_KEY}}
+          SURGE_TOKEN : ${{secrets.SURGE_TOKEN}}
+       #Install and use surge to deploy
+      
