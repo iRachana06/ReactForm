@@ -9,7 +9,7 @@ jobs:
     runs-on : ubuntu-latest
     steps:
       - name: Checkout action
-        uses: actions/checkout@v2 #To checkout our repo befor raising PR
+        uses: actions/checkout@v2 #To checkout our repo before raising PR
       - name: Use NodeJS
         uses: actions/setup-node@v1
         with:
