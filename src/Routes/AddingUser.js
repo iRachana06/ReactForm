@@ -25,10 +25,8 @@ function AddingUser() {
   };
 
   useEffect(() => {
-    {
-      if (textInput.length > 10) seterror(true);
-      else seterror(false);
-    }
+    if (textInput.length > 10) seterror(true);
+    else seterror(false);
   }, [textInput]);
 
   console.log(regisrtyData);
