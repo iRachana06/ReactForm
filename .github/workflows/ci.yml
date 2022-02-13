@@ -14,5 +14,6 @@ jobs:
         with:
           node-version : "12.x"
       - run : npm install
+      - run : npm install prettier
       - run : npm run check-format
       - run : npm test -- --coverage
