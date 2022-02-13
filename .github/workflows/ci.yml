@@ -22,6 +22,13 @@ jobs:
         run : npm run build
       - name: Deploy to Non Prod
         if : github.eventname == 'push'
-        run : npx surge --project ./build --domain techieq-react-intro.surge.sh
+        run : |
+          npm install --global surge
+          cd build
+          cp index.html 200.html
+          surge --project build --domain techieq-react-intro.surge.sh
+        env: 
+          SURGE_LOGIN : ${{secrets.SURGE_KEY}}
+          SURGE_TOKEN : ${{secrets.SURGE_TOKEN}}
        #Install and use surge to deploy
       
