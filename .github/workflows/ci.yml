@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout action
         uses: actions/checkout@v2 #To checkout our repo before raising PR
-      - name: Use NodeJS
+      - name: Use NodeJS 
         uses: actions/setup-node@v1
         with:
           node-version : "12.x"
@@ -19,10 +19,10 @@ jobs:
       - run : npm run check-format
       - run : npm test -- --coverage
       - name: Build App
-        if : github.eventname == 'push'
+        if : github.event_name == 'push'
         run : npm run build
       - name: Deploy to Non Prod
-        if : github.eventname == 'push'
+        if : github.event_name == 'push'
         run : |
           npm install --global surge
           cd build
