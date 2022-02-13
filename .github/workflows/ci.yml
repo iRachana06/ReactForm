@@ -1,0 +1,15 @@
+name : ci-demo
+on: 
+  pull_request:
+  branches : [develop]
+jobs:
+  build:
+    runs-on : ubuntu-latest
+    steps:
+      - uses : action/checkout@v2 #To checkout our repo befor raising PR
+      - name : Use NodeJS
+        with :
+          - node-version : "12.x"
+          - run: npm install
+
+
