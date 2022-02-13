@@ -8,3 +8,17 @@
 
 ## Start the application
 #### Run `npm start` command to start the application. It will be available at localhost:3000. 
+
+## Building project
+#### `npm run build`
+
+## Command to run test 
+#### Tests are written in App.js.test file. Reports will be generated in folder 'coverage'.
+#### `npm run test -- --coverage`
+
+## Using Prettier 
+#### Prettier tool allows you to make sure your code follows a set coding rules. Link to Prettier
+#### https://prettier.io/playground/
+#### You can create rules and add them to .prettierrc file
+#### `npx prettier --check "**/*.js"` This command checks the code against all JS filed
+#### `npx prettier --write "**/*.js"` This command corrects if your files dont follow coding rule

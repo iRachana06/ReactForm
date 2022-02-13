@@ -1,10 +1,10 @@
-import React from 'react';
+import React from "react";
 import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 import Home from "./Routes/Home";
-import Jsxcomp from './Routes/jsxcomp';
-import Registry from "./Routes/Registry";
+import Message from "./Routes/Message";
+import AddingUser from "./Routes/AddingUser";
 
- function App() {
+function App() {
   return (
     <div>
       <BrowserRouter>
@@ -12,13 +12,13 @@ import Registry from "./Routes/Registry";
           <Route path="/" exact>
             <Home />
           </Route>
-          </Switch>
-          <Switch>
-          <Route path="/Registry">
-            <Registry />
-            </Route>
-            <Route path="/Jsxcomp">
-            <Jsxcomp />
+        </Switch>
+        <Switch>
+          <Route path="/AddingUser">
+            <AddingUser />
+          </Route>
+          <Route path="/Message">
+            <Message />
           </Route>
         </Switch>
       </BrowserRouter>
