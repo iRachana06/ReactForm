@@ -27,7 +27,7 @@ jobs:
           npm install --global surge
           cd build
           cp index.html 200.html
-          surge --project build --domain techieq-react-intro.surge.sh
+          surge --project . --domain techieq-react-intro.surge.sh
         env: 
           SURGE_LOGIN : ${{secrets.SURGE_KEY}}
           SURGE_TOKEN : ${{secrets.SURGE_TOKEN}}
