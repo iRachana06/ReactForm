@@ -1,5 +1,5 @@
 # Using this repository
-#### This project creates a simple React app with NodeJS as server. You can create a list, edit it and remove the list elements dynamically.
+#### This project creates a simple React-NodeJS App. You can create a list, edit it and remove the list elements dynamically.
 ## Clone the repository
 #### To use this repository use `git clone https://github.com/iRachana06/ReactForm` command to clone the repository to the local machine.
 
@@ -17,8 +17,7 @@
 #### `npm run test -- --coverage`
 
 ## Using Prettier 
-#### Prettier tool allows you to make sure your code follows a set coding rules. Link to Prettier
-#### https://prettier.io/playground/
+#### Prettier tool allows you to make sure your code follows a set coding rules. Link to Prettier-https://prettier.io/playground/
 #### You can create rules and add them to .prettierrc file
 #### `npx prettier --check "**/*.js"` This command checks the code against all JS filed
 #### `npx prettier --write "**/*.js"` This command corrects if your files dont follow coding rule
